@@ -1,0 +1,784 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Aug 8 22:38:54 2024
+# Process ID: 3681044
+# Current directory: /home/user/vivado_project
+# Command line: vivado -mode batch -source vivado_top.tcl
+# Log file: /home/user/vivado_project/vivado.log
+# Journal file: /home/user/vivado_project/vivado.jou
+# Running On        :user-System-Product-Name
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.3 LTS
+# Processor Detail  :13th Gen Intel(R) Core(TM) i9-13900K
+# CPU Frequency     :5500.000 MHz
+# CPU Physical cores:24
+# CPU Logical cores :32
+# Host memory       :134858 MB
+# Swap memory       :2147 MB
+# Total Virtual     :137005 MB
+# Available Virtual :108204 MB
+#-----------------------------------------------------------
+source vivado_top.tcl
+# set_msg_config -id {Synth 8-5821} -new_severity {WARNING}
+# read_verilog rtl.v
+# synth_design -part xc7k70t -top top
+Command: synth_design -part xc7k70t -top top
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3681292
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1891.137 ; gain = 425.645 ; free physical = 8522 ; free virtual = 103925
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/user/vivado_project/rtl.v:1]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module105' [/home/user/vivado_project/rtl.v:984]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module105' (0#1) [/home/user/vivado_project/rtl.v:984]
+WARNING: [Synth 8-689] width (25) of port connection 'wire110' does not match port width (18) of module 'module105' [/home/user/vivado_project/rtl.v:578]
+WARNING: [Synth 8-689] width (24) of port connection 'wire106' does not match port width (16) of module 'module105' [/home/user/vivado_project/rtl.v:578]
+WARNING: [Synth 8-689] width (7) of port connection 'wire108' does not match port width (4) of module 'module105' [/home/user/vivado_project/rtl.v:578]
+WARNING: [Synth 8-689] width (6) of port connection 'wire109' does not match port width (3) of module 'module105' [/home/user/vivado_project/rtl.v:578]
+WARNING: [Synth 8-689] width (14) of port connection 'y' does not match port width (1038) of module 'module105' [/home/user/vivado_project/rtl.v:578]
+INFO: [Synth 8-6157] synthesizing module 'module192' [/home/user/vivado_project/rtl.v:644]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module200' [/home/user/vivado_project/rtl.v:1428]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module255' [/home/user/vivado_project/rtl.v:6204]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module255' (0#1) [/home/user/vivado_project/rtl.v:6204]
+WARNING: [Synth 8-689] width (11) of port connection 'y' does not match port width (4710) of module 'module255' [/home/user/vivado_project/rtl.v:1986]
+WARNING: [Synth 8-689] width (22) of port connection 'wire258' does not match port width (7) of module 'module255' [/home/user/vivado_project/rtl.v:1986]
+WARNING: [Synth 8-689] width (17) of port connection 'wire257' does not match port width (12) of module 'module255' [/home/user/vivado_project/rtl.v:1986]
+WARNING: [Synth 8-689] width (9) of port connection 'wire256' does not match port width (5) of module 'module255' [/home/user/vivado_project/rtl.v:1986]
+INFO: [Synth 8-6157] synthesizing module 'module619' [/home/user/vivado_project/rtl.v:5212]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module619' (0#1) [/home/user/vivado_project/rtl.v:5212]
+WARNING: [Synth 8-689] width (15) of port connection 'y' does not match port width (2113) of module 'module619' [/home/user/vivado_project/rtl.v:1994]
+WARNING: [Synth 8-689] width (24) of port connection 'wire624' does not match port width (20) of module 'module619' [/home/user/vivado_project/rtl.v:1994]
+WARNING: [Synth 8-689] width (6) of port connection 'wire623' does not match port width (3) of module 'module619' [/home/user/vivado_project/rtl.v:1994]
+WARNING: [Synth 8-689] width (25) of port connection 'wire622' does not match port width (6) of module 'module619' [/home/user/vivado_project/rtl.v:1994]
+INFO: [Synth 8-6157] synthesizing module 'module901' [/home/user/vivado_project/rtl.v:3226]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module901' (0#1) [/home/user/vivado_project/rtl.v:3226]
+WARNING: [Synth 8-689] width (4) of port connection 'y' does not match port width (4533) of module 'module901' [/home/user/vivado_project/rtl.v:2408]
+WARNING: [Synth 8-689] width (24) of port connection 'wire904' does not match port width (13) of module 'module901' [/home/user/vivado_project/rtl.v:2408]
+WARNING: [Synth 8-689] width (17) of port connection 'wire903' does not match port width (15) of module 'module901' [/home/user/vivado_project/rtl.v:2408]
+WARNING: [Synth 8-689] width (17) of port connection 'wire902' does not match port width (3) of module 'module901' [/home/user/vivado_project/rtl.v:2408]
+INFO: [Synth 8-6157] synthesizing module 'module1245' [/home/user/vivado_project/rtl.v:2413]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module1245' (0#1) [/home/user/vivado_project/rtl.v:2413]
+WARNING: [Synth 8-689] width (14) of port connection 'wire1249' does not match port width (13) of module 'module1245' [/home/user/vivado_project/rtl.v:2409]
+WARNING: [Synth 8-689] width (16) of port connection 'y' does not match port width (1752) of module 'module1245' [/home/user/vivado_project/rtl.v:2409]
+INFO: [Synth 8-6155] done synthesizing module 'module200' (0#1) [/home/user/vivado_project/rtl.v:1428]
+WARNING: [Synth 8-689] width (21) of port connection 'wire204' does not match port width (7) of module 'module200' [/home/user/vivado_project/rtl.v:798]
+WARNING: [Synth 8-689] width (3) of port connection 'y' does not match port width (2344) of module 'module200' [/home/user/vivado_project/rtl.v:798]
+WARNING: [Synth 8-689] width (22) of port connection 'wire205' does not match port width (4) of module 'module200' [/home/user/vivado_project/rtl.v:798]
+WARNING: [Synth 8-689] width (21) of port connection 'wire201' does not match port width (14) of module 'module200' [/home/user/vivado_project/rtl.v:798]
+INFO: [Synth 8-6155] done synthesizing module 'module192' (0#1) [/home/user/vivado_project/rtl.v:644]
+WARNING: [Synth 8-689] width (6) of port connection 'y' does not match port width (873) of module 'module192' [/home/user/vivado_project/rtl.v:579]
+WARNING: [Synth 8-689] width (22) of port connection 'wire195' does not match port width (21) of module 'module192' [/home/user/vivado_project/rtl.v:579]
+WARNING: [Synth 8-689] width (19) of port connection 'wire623' does not match port width (3) of module 'module619' [/home/user/vivado_project/rtl.v:641]
+WARNING: [Synth 8-689] width (16) of port connection 'wire622' does not match port width (6) of module 'module619' [/home/user/vivado_project/rtl.v:641]
+WARNING: [Synth 8-689] width (16) of port connection 'y' does not match port width (2113) of module 'module619' [/home/user/vivado_project/rtl.v:641]
+WARNING: [Synth 8-689] width (23) of port connection 'wire620' does not match port width (20) of module 'module619' [/home/user/vivado_project/rtl.v:641]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/user/vivado_project/rtl.v:1]
+WARNING: [Synth 8-6014] Unused sequential element reg186_reg was removed.  [/home/user/vivado_project/rtl.v:1077]
+WARNING: [Synth 8-6014] Unused sequential element reg579_reg was removed.  [/home/user/vivado_project/rtl.v:6609]
+WARNING: [Synth 8-6014] Unused sequential element reg582_reg was removed.  [/home/user/vivado_project/rtl.v:6608]
+WARNING: [Synth 8-6014] Unused sequential element reg584_reg was removed.  [/home/user/vivado_project/rtl.v:6607]
+WARNING: [Synth 8-6014] Unused sequential element reg590_reg was removed.  [/home/user/vivado_project/rtl.v:6605]
+WARNING: [Synth 8-6014] Unused sequential element reg593_reg was removed.  [/home/user/vivado_project/rtl.v:6603]
+WARNING: [Synth 8-6014] Unused sequential element reg595_reg was removed.  [/home/user/vivado_project/rtl.v:6602]
+WARNING: [Synth 8-6014] Unused sequential element reg598_reg was removed.  [/home/user/vivado_project/rtl.v:6601]
+WARNING: [Synth 8-6014] Unused sequential element reg604_reg was removed.  [/home/user/vivado_project/rtl.v:6598]
+WARNING: [Synth 8-6014] Unused sequential element reg607_reg was removed.  [/home/user/vivado_project/rtl.v:6597]
+WARNING: [Synth 8-6014] Unused sequential element reg609_reg was removed.  [/home/user/vivado_project/rtl.v:6596]
+WARNING: [Synth 8-6014] Unused sequential element reg764_reg was removed.  [/home/user/vivado_project/rtl.v:5401]
+WARNING: [Synth 8-6014] Unused sequential element reg770_reg was removed.  [/home/user/vivado_project/rtl.v:5400]
+WARNING: [Synth 8-6014] Unused sequential element reg771_reg was removed.  [/home/user/vivado_project/rtl.v:5399]
+WARNING: [Synth 8-6014] Unused sequential element reg773_reg was removed.  [/home/user/vivado_project/rtl.v:5398]
+WARNING: [Synth 8-6014] Unused sequential element reg776_reg was removed.  [/home/user/vivado_project/rtl.v:5397]
+WARNING: [Synth 8-6014] Unused sequential element reg779_reg was removed.  [/home/user/vivado_project/rtl.v:5396]
+WARNING: [Synth 8-6014] Unused sequential element reg780_reg was removed.  [/home/user/vivado_project/rtl.v:5395]
+WARNING: [Synth 8-6014] Unused sequential element reg781_reg was removed.  [/home/user/vivado_project/rtl.v:5394]
+WARNING: [Synth 8-6014] Unused sequential element reg1222_reg was removed.  [/home/user/vivado_project/rtl.v:3616]
+WARNING: [Synth 8-6014] Unused sequential element reg1224_reg was removed.  [/home/user/vivado_project/rtl.v:3615]
+WARNING: [Synth 8-6014] Unused sequential element reg1226_reg was removed.  [/home/user/vivado_project/rtl.v:3614]
+WARNING: [Synth 8-6014] Unused sequential element reg1228_reg was removed.  [/home/user/vivado_project/rtl.v:3613]
+WARNING: [Synth 8-6014] Unused sequential element reg1230_reg was removed.  [/home/user/vivado_project/rtl.v:3612]
+WARNING: [Synth 8-6014] Unused sequential element reg1232_reg was removed.  [/home/user/vivado_project/rtl.v:3611]
+WARNING: [Synth 8-6014] Unused sequential element reg1234_reg was removed.  [/home/user/vivado_project/rtl.v:3610]
+WARNING: [Synth 8-6014] Unused sequential element reg1236_reg was removed.  [/home/user/vivado_project/rtl.v:3609]
+WARNING: [Synth 8-6014] Unused sequential element reg1237_reg was removed.  [/home/user/vivado_project/rtl.v:3608]
+WARNING: [Synth 8-6014] Unused sequential element reg1240_reg was removed.  [/home/user/vivado_project/rtl.v:3606]
+WARNING: [Synth 8-6014] Unused sequential element reg1238_reg was removed.  [/home/user/vivado_project/rtl.v:3607]
+WARNING: [Synth 8-6014] Unused sequential element reg1372_reg was removed.  [/home/user/vivado_project/rtl.v:2571]
+WARNING: [Synth 8-6014] Unused sequential element reg1373_reg was removed.  [/home/user/vivado_project/rtl.v:2570]
+WARNING: [Synth 8-3917] design top has port y[1537] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1536] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1535] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1534] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1533] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1532] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1531] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1530] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1516] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1515] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1514] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1513] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1512] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1511] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1510] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1509] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1508] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1507] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1506] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1505] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1504] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1503] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1502] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1501] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1500] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1499] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1498] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1497] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1496] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1495] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1494] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1493] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1492] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1491] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1490] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1489] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1488] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1487] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1486] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1485] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1484] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1483] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1482] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1481] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1480] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1479] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1478] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1477] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1476] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1475] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1474] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1473] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1425] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1424] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1423] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1347] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1346] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1345] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1344] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1343] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1342] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1285] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1284] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1283] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1282] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1281] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1280] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1279] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1278] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1277] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1276] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1275] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1274] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1273] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1272] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1271] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1270] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1269] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1268] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1267] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1266] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1264] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1263] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1262] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1261] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1260] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1259] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1258] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1257] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1256] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1255] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1099] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1098] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1097] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1096] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1095] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1094] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1093] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[960] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[959] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2070.105 ; gain = 604.613 ; free physical = 7812 ; free virtual = 103208
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2087.918 ; gain = 622.426 ; free physical = 9081 ; free virtual = 104480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbg676-3
+INFO: [Device 21-403] Loading part xc7k70tfbg676-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2095.922 ; gain = 630.430 ; free physical = 9065 ; free virtual = 104465
+---------------------------------------------------------------------------------
+INFO: [Device 21-9227] Part: xc7k70tfbg676-3 does not have CEAM library.
+WARNING: [Synth 8-327] inferring latch for variable 'forvar119' [/home/user/vivado_project/rtl.v:1144]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar138' [/home/user/vivado_project/rtl.v:1136]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar141' [/home/user/vivado_project/rtl.v:1129]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar178' [/home/user/vivado_project/rtl.v:1110]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar183' [/home/user/vivado_project/rtl.v:1107]
+WARNING: [Synth 8-5577] Initial value set on signal reg384 is ignored as its size does not match that of the signal. Simulation mismatch may occur. [/home/user/vivado_project/rtl.v:6321]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar289' [/home/user/vivado_project/rtl.v:6938]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar288' [/home/user/vivado_project/rtl.v:6936]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar297' [/home/user/vivado_project/rtl.v:6932]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar295' [/home/user/vivado_project/rtl.v:6928]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar303' [/home/user/vivado_project/rtl.v:6927]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar318' [/home/user/vivado_project/rtl.v:6917]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar346' [/home/user/vivado_project/rtl.v:6910]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar399' [/home/user/vivado_project/rtl.v:6873]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar431' [/home/user/vivado_project/rtl.v:6860]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar460' [/home/user/vivado_project/rtl.v:6845]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar463' [/home/user/vivado_project/rtl.v:6843]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar470' [/home/user/vivado_project/rtl.v:6837]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar520' [/home/user/vivado_project/rtl.v:6806]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar526' [/home/user/vivado_project/rtl.v:6800]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar516' [/home/user/vivado_project/rtl.v:6798]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar533' [/home/user/vivado_project/rtl.v:6795]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar544' [/home/user/vivado_project/rtl.v:6790]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar548' [/home/user/vivado_project/rtl.v:6788]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar593' [/home/user/vivado_project/rtl.v:6765]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar605' [/home/user/vivado_project/rtl.v:6754]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar634' [/home/user/vivado_project/rtl.v:5549]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar641' [/home/user/vivado_project/rtl.v:5543]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar652' [/home/user/vivado_project/rtl.v:5539]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar660' [/home/user/vivado_project/rtl.v:5533]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar760' [/home/user/vivado_project/rtl.v:5476]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar767' [/home/user/vivado_project/rtl.v:5474]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar777' [/home/user/vivado_project/rtl.v:5467]
+WARNING: [Synth 8-5577] Initial value set on signal reg1027 is ignored as its size does not match that of the signal. Simulation mismatch may occur. [/home/user/vivado_project/rtl.v:3343]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar920' [/home/user/vivado_project/rtl.v:3939]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar921' [/home/user/vivado_project/rtl.v:3935]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar930' [/home/user/vivado_project/rtl.v:3933]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar937' [/home/user/vivado_project/rtl.v:3931]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar939' [/home/user/vivado_project/rtl.v:3925]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar953' [/home/user/vivado_project/rtl.v:3920]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar956' [/home/user/vivado_project/rtl.v:3915]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar987' [/home/user/vivado_project/rtl.v:3900]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar991' [/home/user/vivado_project/rtl.v:3901]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar995' [/home/user/vivado_project/rtl.v:3899]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar992' [/home/user/vivado_project/rtl.v:3893]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1026' [/home/user/vivado_project/rtl.v:3877]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1056' [/home/user/vivado_project/rtl.v:3862]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1063' [/home/user/vivado_project/rtl.v:3859]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1065' [/home/user/vivado_project/rtl.v:3857]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1072' [/home/user/vivado_project/rtl.v:3853]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1081' [/home/user/vivado_project/rtl.v:3848]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1107' [/home/user/vivado_project/rtl.v:3833]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1131' [/home/user/vivado_project/rtl.v:3813]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1134' [/home/user/vivado_project/rtl.v:3812]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1265' [/home/user/vivado_project/rtl.v:2691]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1277' [/home/user/vivado_project/rtl.v:2686]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1305' [/home/user/vivado_project/rtl.v:2671]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1300' [/home/user/vivado_project/rtl.v:2674]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1298' [/home/user/vivado_project/rtl.v:2670]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1306' [/home/user/vivado_project/rtl.v:2668]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1320' [/home/user/vivado_project/rtl.v:2659]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1329' [/home/user/vivado_project/rtl.v:2652]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1333' [/home/user/vivado_project/rtl.v:2650]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1350' [/home/user/vivado_project/rtl.v:2643]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1352' [/home/user/vivado_project/rtl.v:2641]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1356' [/home/user/vivado_project/rtl.v:2638]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1359' [/home/user/vivado_project/rtl.v:2632]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1369' [/home/user/vivado_project/rtl.v:2628]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1370' [/home/user/vivado_project/rtl.v:2623]
+WARNING: [Synth 8-5577] Initial value set on signal reg210 is ignored as its size does not match that of the signal. Simulation mismatch may occur. [/home/user/vivado_project/rtl.v:1511]
+WARNING: [Synth 8-5577] Initial value set on signal reg230 is ignored as its size does not match that of the signal. Simulation mismatch may occur. [/home/user/vivado_project/rtl.v:1504]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar208' [/home/user/vivado_project/rtl.v:1796]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar212' [/home/user/vivado_project/rtl.v:1793]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar239' [/home/user/vivado_project/rtl.v:1773]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar790' [/home/user/vivado_project/rtl.v:1763]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar797' [/home/user/vivado_project/rtl.v:1761]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar798' [/home/user/vivado_project/rtl.v:1754]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar802' [/home/user/vivado_project/rtl.v:1753]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar816' [/home/user/vivado_project/rtl.v:1747]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar819' [/home/user/vivado_project/rtl.v:1745]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar813' [/home/user/vivado_project/rtl.v:1741]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar859' [/home/user/vivado_project/rtl.v:1720]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar864' [/home/user/vivado_project/rtl.v:1717]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar868' [/home/user/vivado_project/rtl.v:1715]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar860' [/home/user/vivado_project/rtl.v:1713]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1408' [/home/user/vivado_project/rtl.v:776]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar1439' [/home/user/vivado_project/rtl.v:759]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar10' [/home/user/vivado_project/rtl.v:251]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar22' [/home/user/vivado_project/rtl.v:244]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar47' [/home/user/vivado_project/rtl.v:229]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar78' [/home/user/vivado_project/rtl.v:213]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar88' [/home/user/vivado_project/rtl.v:206]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar93' [/home/user/vivado_project/rtl.v:203]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar100' [/home/user/vivado_project/rtl.v:197]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar89' [/home/user/vivado_project/rtl.v:195]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2161.656 ; gain = 696.164 ; free physical = 7595 ; free virtual = 103012
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 1     
+	   3 Input   28 Bit       Adders := 1     
+	   3 Input   25 Bit       Adders := 2     
+	   2 Input   25 Bit       Adders := 2     
+	   2 Input   24 Bit       Adders := 5     
+	   3 Input   24 Bit       Adders := 2     
+	   2 Input   23 Bit       Adders := 4     
+	   2 Input   22 Bit       Adders := 6     
+	   3 Input   22 Bit       Adders := 1     
+	   4 Input   22 Bit       Adders := 1     
+	   2 Input   21 Bit       Adders := 2     
+	   3 Input   21 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 7     
+	   2 Input   19 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 3     
+	   3 Input   18 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 2     
+	   3 Input   17 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   15 Bit       Adders := 4     
+	   3 Input   15 Bit       Adders := 4     
+	   2 Input   14 Bit       Adders := 10    
+	   3 Input   14 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 6     
+	   3 Input   13 Bit       Adders := 1     
+	   3 Input   12 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 3     
+	   3 Input   11 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 6     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 8     
+	   3 Input    8 Bit       Adders := 5     
+	   2 Input    7 Bit       Adders := 2     
+	   3 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 3     
+	   3 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 3     
+	   3 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 5     
+	   3 Input    1 Bit       Adders := 2     
+	   2 Input    1 Bit       Adders := 1     
++---XORs : 
+	   2 Input     36 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input     25 Bit         XORs := 5     
+	   2 Input     24 Bit         XORs := 7     
+	   3 Input     24 Bit         XORs := 1     
+	   2 Input     23 Bit         XORs := 13    
+	   2 Input     22 Bit         XORs := 8     
+	   2 Input     21 Bit         XORs := 14    
+	   2 Input     20 Bit         XORs := 3     
+	   2 Input     19 Bit         XORs := 11    
+	   2 Input     18 Bit         XORs := 8     
+	   2 Input     17 Bit         XORs := 4     
+	   2 Input     16 Bit         XORs := 1     
+	   2 Input     15 Bit         XORs := 5     
+	   2 Input     14 Bit         XORs := 5     
+	   2 Input     13 Bit         XORs := 11    
+	   2 Input     12 Bit         XORs := 10    
+	   2 Input     11 Bit         XORs := 11    
+	   2 Input     10 Bit         XORs := 10    
+	   2 Input      9 Bit         XORs := 2     
+	   2 Input      8 Bit         XORs := 5     
+	   2 Input      7 Bit         XORs := 3     
+	   2 Input      6 Bit         XORs := 4     
+	   2 Input      5 Bit         XORs := 6     
+	   2 Input      4 Bit         XORs := 3     
+	   2 Input      3 Bit         XORs := 2     
+	   2 Input      2 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 6     
++---XORs : 
+	               45 Bit    Wide XORs := 1     
+	               37 Bit    Wide XORs := 1     
+	               26 Bit    Wide XORs := 1     
+	               25 Bit    Wide XORs := 6     
+	               24 Bit    Wide XORs := 8     
+	               23 Bit    Wide XORs := 5     
+	               22 Bit    Wide XORs := 11    
+	               21 Bit    Wide XORs := 8     
+	               20 Bit    Wide XORs := 13    
+	               19 Bit    Wide XORs := 15    
+	               18 Bit    Wide XORs := 10    
+	               17 Bit    Wide XORs := 11    
+	               16 Bit    Wide XORs := 7     
+	               15 Bit    Wide XORs := 7     
+	               14 Bit    Wide XORs := 8     
+	               13 Bit    Wide XORs := 14    
+	               12 Bit    Wide XORs := 9     
+	               11 Bit    Wide XORs := 14    
+	               10 Bit    Wide XORs := 7     
+	                9 Bit    Wide XORs := 3     
+	                8 Bit    Wide XORs := 6     
+	                7 Bit    Wide XORs := 6     
+	                6 Bit    Wide XORs := 8     
+	                5 Bit    Wide XORs := 7     
+	                4 Bit    Wide XORs := 5     
+	                3 Bit    Wide XORs := 19    
+	                2 Bit    Wide XORs := 11    
+	                1 Bit    Wide XORs := 26    
++---Registers : 
+	               25 Bit    Registers := 32    
+	               24 Bit    Registers := 41    
+	               23 Bit    Registers := 30    
+	               22 Bit    Registers := 26    
+	               21 Bit    Registers := 39    
+	               20 Bit    Registers := 36    
+	               19 Bit    Registers := 48    
+	               18 Bit    Registers := 49    
+	               17 Bit    Registers := 46    
+	               16 Bit    Registers := 40    
+	               15 Bit    Registers := 51    
+	               14 Bit    Registers := 43    
+	               13 Bit    Registers := 43    
+	               12 Bit    Registers := 42    
+	               11 Bit    Registers := 64    
+	               10 Bit    Registers := 54    
+	                9 Bit    Registers := 38    
+	                8 Bit    Registers := 51    
+	                7 Bit    Registers := 44    
+	                6 Bit    Registers := 49    
+	                5 Bit    Registers := 52    
+	                4 Bit    Registers := 53    
+	                3 Bit    Registers := 62    
+	                2 Bit    Registers := 48    
+	                1 Bit    Registers := 70    
++---Multipliers : 
+	               6x25  Multipliers := 1     
+	              25x25  Multipliers := 1     
+	              20x24  Multipliers := 1     
+	              13x22  Multipliers := 1     
+	               1x22  Multipliers := 1     
+	              12x22  Multipliers := 1     
+	               1x21  Multipliers := 1     
+	               8x20  Multipliers := 1     
+	               3x19  Multipliers := 2     
+	               8x19  Multipliers := 1     
+	               1x18  Multipliers := 1     
+	               1x17  Multipliers := 1     
+	              12x17  Multipliers := 1     
+	               1x15  Multipliers := 2     
+	               8x16  Multipliers := 1     
+	               1x16  Multipliers := 1     
+	               7x15  Multipliers := 2     
+	               3x14  Multipliers := 2     
+	              11x14  Multipliers := 1     
+	               1x14  Multipliers := 1     
+	               6x14  Multipliers := 1     
+	               7x13  Multipliers := 2     
+	               7x12  Multipliers := 2     
+	              12x12  Multipliers := 2     
+	               6x12  Multipliers := 2     
+	               8x12  Multipliers := 1     
+	               9x11  Multipliers := 2     
+	              11x11  Multipliers := 1     
+	               5x11  Multipliers := 1     
+	               8x11  Multipliers := 1     
+	               1x11  Multipliers := 1     
+	              10x10  Multipliers := 1     
+	               1x10  Multipliers := 2     
+	                2x9  Multipliers := 1     
+	                8x8  Multipliers := 1     
+	                1x8  Multipliers := 1     
+	                7x7  Multipliers := 1     
+	                2x5  Multipliers := 1     
+	                1x4  Multipliers := 3     
+	                4x5  Multipliers := 1     
+	                1x3  Multipliers := 2     
+	                1x1  Multipliers := 2     
++---Muxes : 
+	   2 Input   53 Bit        Muxes := 2     
+	   2 Input   46 Bit        Muxes := 3     
+	   2 Input   45 Bit        Muxes := 2     
+	   2 Input   39 Bit        Muxes := 1     
+	   2 Input   36 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 5     
+	   2 Input   28 Bit        Muxes := 1     
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 60    
+	   3 Input   25 Bit        Muxes := 2     
+	   6 Input   25 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 73    
+	   2 Input   23 Bit        Muxes := 83    
+	   3 Input   23 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 60    
+	   3 Input   22 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 76    
+	   2 Input   20 Bit        Muxes := 96    
+	   2 Input   19 Bit        Muxes := 73    
+	   3 Input   19 Bit        Muxes := 2     
+	   4 Input   19 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 62    
+	   4 Input   18 Bit        Muxes := 1     
+	   3 Input   18 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 62    
+	   3 Input   17 Bit        Muxes := 1     
+	   5 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 80    
+	   3 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 114   
+	   3 Input   15 Bit        Muxes := 5     
+	   2 Input   14 Bit        Muxes := 114   
+	   2 Input   13 Bit        Muxes := 64    
+	   3 Input   13 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 72    
+	   4 Input   12 Bit        Muxes := 2     
+	   3 Input   12 Bit        Muxes := 3     
+	   5 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 115   
+	   3 Input   11 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 98    
+	   3 Input   10 Bit        Muxes := 3     
+	   4 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 62    
+	   3 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 132   
+	   3 Input    8 Bit        Muxes := 6     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 64    
+	   3 Input    7 Bit        Muxes := 2     
+	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 61    
+	   5 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 77    
+	   3 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 84    
+	   3 Input    4 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 95    
+	   2 Input    2 Bit        Muxes := 75    
+	   2 Input    1 Bit        Muxes := 227   
+	   3 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Rs := 5     
+	   2 Input     14 Bit         XORs := 5     
+	   2 Input     13 Bit         XORs := 11    
+	   2 Input     12 Bit         XORs := 10    
+	   2 Input     11 Bit         XORs := 11    
+	   2 Input     10 Bit         XORs := 10    
+	   2 Input      9 Bit         XORs := 2     
+	   2 Input      8 Bit         XORs := 5     
+	   2 Input      7 Bit         XORs := 3     
+	   2 Input      6 Bit         XORs := 4     
+	   2 Input      5 Bit         XORs := 6     
+	   2 Input      4 Bit         XORs := 3     
+	   2 Input      3 Bit         XORs := 2     
+	   2 Input      2 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 6     
++---XORs : 
+	               45 Bit    Wide XORs := 1     
+	               37 Bit    Wide XORs := 1     
+	               26 Bit    Wide XORs := 1     
+	               25 Bit    Wide XORs := 6     
+	               24 Bit    Wide XORs := 8     
+	               23 Bit    Wide XORs := 5     
+	               22 Bit    Wide XORs := 11    
+	               21 Bit    Wide XORs := 8     
+	               20 Bit    Wide XORs := 13    
+	               19 Bit    Wide XORs := 15    
+	               18 Bit    Wide XORs := 10    
+	               17 Bit    Wide XORs := 11    
+	               16 Bit    Wide XORs := 7     
+	               15 Bit    Wide XORs := 7     
+	               14 Bit    Wide XORs := 8     
+	               13 Bit    Wide XORs := 14    
+	               12 Bit    Wide XORs := 9     
+	               11 Bit    Wide XORs := 14    
+	               10 Bit    Wide XORs := 7     
+	                9 Bit    Wide XORs := 3     
+	                8 Bit    Wide XORs := 6     
+	                7 Bit    Wide XORs := 6     
+	                6 Bit    Wide XORs := 8     
+	                5 Bit    Wide XORs := 7     
+	                4 Bit    Wide XORs := 5     
+	                3 Bit    Wide XORs := 19    
+	                2 Bit    Wide XORs := 11    
+	                1 Bit    Wide XORs := 26    
++---Registers : 
+	               25 Bit    Registers := 32    
+	               24 Bit    Registers := 41    
+	               23 Bit    Registers := 30    
+	               22 Bit    Registers := 26    
+	               21 Bit    Registers := 39    
+	               20 Bit    Registers := 36    
+	               19 Bit    Registers := 48    
+	               18 Bit    Registers := 49    
+	               17 Bit    Registers := 46    
+	               16 Bit    Registers := 40    
+	               15 Bit    Registers := 51    
+	               14 Bit    Registers := 43    
+	               13 Bit    Registers := 43    
+	               12 Bit    Registers := 42    
+	               11 Bit    Registers := 64    
+	               10 Bit    Registers := 54    
+	                9 Bit    Registers := 38    
+	                8 Bit    Registers := 51    
+	                7 Bit    Registers := 44    
+	                6 Bit    Registers := 49    
+	                5 Bit    Registers := 52    
+	                4 Bit    Registers := 53    
+	                3 Bit    Registers := 62    
+	                2 Bit    Registers := 48    
+	                1 Bit    Registers := 70    
++---Multipliers : 
+	               6x25  Multipliers := 1     
+	              25x25  Multipliers := 1     
+	              20x24  Multipliers := 1     
+	              13x22  Multipliers := 1     
+	               1x22  Multipliers := 1     
+	              12x22  Multipliers := 1     
+	               1x21  Multipliers := 1     
+	               8x20  Multipliers := 1     
+	               3x19  Multipliers := 2     
+	               8x19  Multipliers := 1     
+	               1x18  Multipliers := 1     
+	               1x17  Multipliers := 1     
+	              12x17  Multipliers := 1     
+	               1x15  Multipliers := 2     
+	               8x16  Multipliers := 1     
+	               1x16  Multipliers := 1     
+	               7x15  Multipliers := 2     
+	               3x14  Multipliers := 2     
+	              11x14  Multipliers := 1     
+	               1x14  Multipliers := 1     
+	               6x14  Multipliers := 1     
+	               7x13  Multipliers := 2     
+	               7x12  Multipliers := 2     
+	              12x12  Multipliers := 2     
+	               6x12  Multipliers := 2     
+	               8x12  Multipliers := 1     
+	               9x11  Multipliers := 2     
+	              11x11  Multipliers := 1     
+	               5x11  Multipliers := 1     
+	               8x11  Multipliers := 1     
+	               1x11  Multipliers := 1     
+	              10x10  Multipliers := 1     
+	               1x10  Multipliers := 2     
+	                2x9  Multipliers := 1     
+	                8x8  Multipliers := 1     
+	                1x8  Multipliers := 1     
+	                7x7  Multipliers := 1     
+	                2x5  Multipliers := 1     
+	                1x4  Multipliers := 3     
+	                4x5  Multipliers := 1     
+	                1x3  Multipliers := 2     
+	                1x1  Multipliers := 2     
++---Muxes : 
+	   2 Input   53 Bit        Muxes := 2     
+	   2 Input   46 Bit        Muxes := 3     
+	   2 Input   45 Bit        Muxes := 2     
+	   2 Input   39 Bit        Muxes := 1     
+	   2 Input   36 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 5     
+	   2 Input   28 Bit        Muxes := 1     
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 60    
+	   3 Input   25 Bit        Muxes := 2     
+	   6 Input   25 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 73    
+	   2 Input   23 Bit        Muxes := 83    
+	   3 Input   23 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 60    
+	   3 Input   22 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 76    
+	   2 Input   20 Bit        Muxes := 96    
+	   2 Input   19 Bit        Muxes := 73    
+	   3 Input   19 Bit        Muxes := 2     
+	   4 Input   19 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 62    
+	   4 Input   18 Bit        Muxes := 1     
+	   3 Input   18 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 62    
+	   3 Input   17 Bit        Muxes := 1     
+	   5 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 80    
+	   3 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 114   
+	   3 Input   15 Bit        Muxes := 5     
+	   2 Input   14 Bit        Muxes := 114   
+	   2 Input   13 Bit        Muxes := 64    
+	   3 Input   13 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 72    
+	   4 Input   12 Bit        Muxes := 2     
+	   3 Input   12 Bit        Muxes := 3     
+	   5 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 115   
+	   3 Input   11 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 98    
+	   3 Input   10 Bit        Muxes := 3     
+	   4 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 62    
+	   3 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 132   
+	   3 Input    8 Bit        Muxes := 6     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 64    
+	   3 Input    7 Bit        Muxes := 2     
+	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 61    
+	   5 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 77    
+	   3 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 84    
+	   3 Input    4 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 95    
+	   2 Input    2 Bit        Muxes := 75    
+	   2 Input    1 Bit        Muxes := 227   
+	   3 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
