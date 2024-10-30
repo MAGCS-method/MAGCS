@@ -18,69 +18,101 @@
  However, the complexity of optimization operations and the variety of parameter configurations can introduce potential faults during the synthesis process, leading incorrect logic synthesis. To this end, we propose MAGCS, a method for detecting optimization faults in logic synthesis. MAGCS leverages multi-agent reinforcement learning during real-time testing to dynamically optimize configuration sequences, enabling efficient detection of synthesis optimization faults. MAGCS consists of three main components. First, the test program selection module extracts multi-dimensional features and calculates cosine similarity to select the most representative test cases from a large dataset. Second, the optimization sequence selection module uses the A2C multi-agent reinforcement learning algorithm to dynamically adjust operation sequences and parameter configurations, gradually discovering the optimal sequence of optimization steps. Finally, the optimization fault validation module performs rigorous equivalence checking to ensure that the synthesized design is functionally identical to the original, effectively identifying any faults introduced during optimization. We conducted comprehensive evaluations of this framework using Vivado and Yosys, two major logic synthesis tools, identifying 32 faults across four categories. All issues have been confirmed and resolved by the respective vendors and communities. Furthermore, officials from the Vivado community highly praised the fault reports submitted by MAGCS, recognizing their significance in improving the tool.
 
 ***
-### Main File
-Our methodology is located in the 'method' directory:
+### Directory Structure of MAGCS-method
+1. MAGCS Folder:
+This folder contains the implementation of our proposed MAGCS method for detecting optimization faults in logic synthesis tools. Key components include:
 
-1.The "LoSyTe_method" directory features our proposed LoSyTe algorithm's implementation, which includes:
+(1) MAGCS_YOSYS.py and MAGCS_Vivado.py: Implement the MAGCS algorithm tailored for detecting optimization faults in the YOSYS and Vivado synthesis tools, respectively.
+(2) Evaluate_Yosys.py and Evaluate_Vivado.py: Define our reward function, designed to guide both the selection of optimization operation sequences and the configuration parameters for each optimization step.
 
-(1)LoSyTe.py: The main function and the first component (Configuration selection component) for dynamic parameter configuration acquisition.
-(2)get_reward.py: Evaluates each round's parameter configuration, incorporating the second (Test-program vectorization component) and third components (Equivalence checking component).
-(3)get_feature.py: Calculates feature vectors for each test program.
-(4)get_faults_number.py: Counts the number of faults discovered in the test programs generated each round.
-(5)config.toml and config_update.py: config.toml is the parameter configuration file, and config_update.py updates this file with the latest parameter configuration combinations after each round.
+2. feature Folder:
+(1) Contains the Verilog code features we constructed to support the diversity of test programs.
 
-2.The "Baseline" folder:
+3. get_feature Folder:
+This folder provides code to extract and calculate features for Verilog code:
 
-Contains the implementation of the five comparison algorithms used in this study: Default, Swarm, HIS, RECORD, and MCS.
+(1) ALL_get_feature.py: Parses given Verilog files into AST format and calculates their features using the feature package.
+(2) Diversity_calculation.py: Calculates the differences between Verilog code files, serving as the core of our test case selection component, which builds the final test set.
 
-3.The "Faults" folder:
+4. baseline Folder:
+Contains the baseline algorithms used in our study for comparative purposes:
 
-Includes the defects discovered in the Vivado and Yosys logic synthesis tools. Each error file comes with a fault_description.pdf detailing the conditions that trigger the fault and an explanation of the error.
+(1) Default: Uses the default optimization sequence provided by the synthesis tool (e.g., YOSYS with opt_fast, opt_full).
+(2) InitSwarm: Randomly modifies certain configuration parameters within a fixed optimization sequence.
+(3) DynSwarm: First constructs a random sequence of optimization operations, then randomly modifies some configuration parameters.
+(4) DeLoSo: Uses a heuristic algorithm to explore optimization sequences and parameter configurations.
+
+5. Faults Folder:
+(1) This folder contains the confirmed faults discovered in the Vivado and Yosys synthesis tools. Currently, a total of 32 faults have been identified and resolved. Each fault is documented with a failure_description.pdf, providing details on the fault conditions and a thorough explanation.
 ***
 
 ### Here are the details of these bugs
-These errors in the error file can be reproduced using Vivado 2023.1, 2023.2 and Yosys 0.30+48.
+These errors in the error file can be reproduced using Vivado 2024.1 and Yosys 0.41 + 126.
 
-You can find all bug files in path `method/optimization bugs`.
+You can find all bug files in path `method/optimization faults`.
 
-Fault1：vivado	7BrmgwSAB	 HARTHOptPost::optimize() function triggers a crash during Vivado synthesis.
+Fault1：Vivado 8TyRQBSA3 Vivado Crash in HARTHOptPost::prepDsps()
 
-Fault2：vivado	7jBos5SAC  Synthesis failure due to an unexpected fault in the HARTGLAddGen() function.
+Fault2：Vivado 8gjjsGSAQ Vivado Crash in HARTLOptAbc::runNlOpt()
 
-Fault3：vivado	7jBooqSAC	 Error invoking Tcl\_Panic function, triggering synthesis termination.
+Fault3：Vivado 8cMtrMSAS HARTNlOptimize::modOptimize() Error in Vivado
 
-Fault4：vivado	7mhiM4SAI	 Synthesis failure is encountered as a consequence of a crash initiated by the NBaseModC::realModule()function.
+Fault4：Vivado 7BrmgwSAB Crash in HARTHOptPost::optimize() During Synthesis
 
-Fault5：vivado	7hvpQPSAY	 The HARTOptMux::findEnc() function triggers a Vivado crash, resulting in synthesis failure.
+Fault5：Vivado 8boSFLSA2 NDup::copyModule() Causes Vivado Setback
 
-Fault6：vivado	7HkoVvSAJ	 The HARTNDb::elaborate function triggered a Vivado crash, causing the synthesis to fail.
+Fault6：Vivado 8a5wHySAI HARTSWorker::runInternal() Crashing Vivado
 
-Fault7：vivado	7k0SoLSAU	 Vivado synthesis failure is attributed to a crash triggered by the ConstProp::evaluate() function.
+Fault7：Vivado 8YNb4PSAT Vivado Obstructed by hdi::tcltasks() Crash
 
-Fault8：vivado	7k0StYSAU	 The NPinC::parentModule() function is causing Vivado to crash.
+Fault8：Vivado 8jW2ngSAC HARTSWorker::runJob() Causing Vivado Failure
 
-Fault9：vivado	7lpEt6SAE	 Vivado synthesis is hitting a roadblock with a crash initiated by the HARTHOptPost::prepDsps() function.
+Fault9：Vivado 8bGuVzSAK Vivado Crash in ConstProp::cleanup()
 
-Fault10：vivado	7rbE4ISAU	 Vivado Synthesis Crashes and Unable to Locate Problematic Function in Log Files.
+Fault10：Vivado 8gjjtHSAQ Stack Overflow Check Causes Vivado Issues
 
-Fault11：vivado	7lRrQrSAK	 The HARTNDb::constProp() function is provoking a Vivado crash.
+Fault11：Vivado 8gjjv8SAA Vivado Crash in GDpGen::implementBinary()
 
-Fault12：vivado	7yJmiPSAS	 Vivado Synthesis Crashes and Unable to Locate Problematic Function in Log Files.
+Fault12：Vivado 8jVeCmSAK Crash Due to HARTTUpdateTNInstC::updateCell()
 
-Fault13：vivado	7p4vsSSAQ	 Synthesis is failing due to an fault within the DFNode::findDFPin() function.
+Fault13：Vivado 8jW2nfSAC Optimize1::optimize() Malfunction in Vivado
 
-Fault14：vivado	7iVNTSSA4	 When synthesizing, an fault occurs in the SPinArray::createBus() function.
+Fault14：Vivado 8aRj9KSAS HSynMod::connectInputPin() Crash in Vivado
 
-Fault15：vivado	7lRrQrSAK	 The exception in the HRTInvoker::inProcessLaunch() function results in synthesis failure.
+Fault15：Vivado 8jW2xgSAC Crash in NDbC::uniquePrefixes() in Vivado
 
-Fault16：vivado	7ZIdXVSA1	 Inconsistent Simulation Results Due to Logic Synthesis Optimization Issue.
+Fault16：Vivado 7AD9ZWSA1 unsigned() Function Error Due to Synthesis Parameters
 
-Fault17：yosys	   4079	   Issue in Yosys Synthesis: 'std::length\_fault' Leads to Termination.
+Fault17：Vivado 8X0u8WSAR Vivado Freezes During Ubuntu Synthesis
 
-Fault18：yosys	   4056	   Long runtime and high memory usage for synth.
+Fault18：Vivado 8ZY2lqSAD Vivado Optimization Termination During Synthesis
 
-Fault19：yosys	   4071	   Assertion Failure in AST Processing during Verilog Synthesi.
+Fault19：Vivado 8Vzsu9SAB Large Design Causes Vivado to Freeze
 
-Fault20：yosys	   4077	   Yosys Verilog Parsing fault: Issue in AST Generation.
+Fault20：Vivado 8aRjBGSA0 Ubuntu Design Optimization Freezes Vivado
+
+Fault21：Vivado 8boBgSSAU Vivado Stalls During Synthesis on Ubuntu
+
+Fault22：Vivado 8bGuWxSAK Vivado Hangs on Specific Verilog File During Synthesis
+
+Fault23：Vivado 8gjjwGSAQ Synthesis Hang Issue in Vivado
+
+Fault24：Vivado 8XGDKYSA5 Vivado Stalls on Specific File in Optimization
+
+Fault25：Vivado 8YmcY9SAJ Vivado Optimization Causes Process Hang
+
+Fault26：Vivado 8XVl5vSAD Ubuntu Synthesis Process Hangs in Vivado
+
+Fault27：Yosys 4610 Yosys Synthesis std::out_of_range Error
+
+Fault28：Yosys 4486 Yosys Optimization Causes Incorrect Output
+
+Fault29：Yosys 4491 Custom Yosys Passes Cause Faulty Synthesis
+
+Fault30：Yosys 4478 Yosys Optimization Error in PEEPOPT Pass
+
+Fault31：Yosys 4427 Yosys Verilog Parsing Error After File Read
+
+Fault32：Yosys 4458 Yosys Synthesis Hash Table Overflow
 ***
 **We've had so much help from Vivado and Yosys staff in finding and confirming bugs. I would like to express my gratitude here.**
