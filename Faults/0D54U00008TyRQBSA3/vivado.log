@@ -1,0 +1,290 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Jun 17 18:14:30 2024
+# Process ID: 1229857
+# Current directory: /home/user/vivado_project
+# Command line: vivado -mode tcl
+# Log file: /home/user/vivado_project/vivado.log
+# Journal file: /home/user/vivado_project/vivado.jou
+# Running On        :user-System-Product-Name
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.3 LTS
+# Processor Detail  :13th Gen Intel(R) Core(TM) i9-13900K
+# CPU Frequency     :5500.000 MHz
+# CPU Physical cores:24
+# CPU Logical cores :32
+# Host memory       :134858 MB
+# Swap memory       :2147 MB
+# Total Virtual     :137005 MB
+# Available Virtual :84587 MB
+#-----------------------------------------------------------
+read_verilog rtl.v 
+/home/user/vivado_project/rtl.v
+synth_design -top top -flatten_hierarchy none -bufg 5 -directive AreaMapLargeShiftRegToBRAM
+Command: synth_design -top top -flatten_hierarchy none -bufg 5 -directive AreaMapLargeShiftRegToBRAM
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1230975
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1805.699 ; gain = 424.617 ; free physical = 77089 ; free virtual = 81744
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/user/vivado_project/rtl.v:1]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module24' [/home/user/vivado_project/rtl.v:269]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module24' (0#1) [/home/user/vivado_project/rtl.v:269]
+WARNING: [Synth 8-689] width (8) of port connection 'y' does not match port width (407) of module 'module24' [/home/user/vivado_project/rtl.v:176]
+WARNING: [Synth 8-689] width (21) of port connection 'wire28' does not match port width (10) of module 'module24' [/home/user/vivado_project/rtl.v:265]
+WARNING: [Synth 8-689] width (22) of port connection 'wire29' does not match port width (21) of module 'module24' [/home/user/vivado_project/rtl.v:265]
+WARNING: [Synth 8-689] width (6) of port connection 'y' does not match port width (407) of module 'module24' [/home/user/vivado_project/rtl.v:265]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/user/vivado_project/rtl.v:1]
+WARNING: [Synth 8-3848] Net wire153 in module/entity module24 does not have driver. [/home/user/vivado_project/rtl.v:292]
+WARNING: [Synth 8-3848] Net wire51 in module/entity module24 does not have driver. [/home/user/vivado_project/rtl.v:296]
+WARNING: [Synth 8-3848] Net wire116 in module/entity module24 does not have driver. [/home/user/vivado_project/rtl.v:295]
+WARNING: [Synth 8-3848] Net wire221 in module/entity module24 does not have driver. [/home/user/vivado_project/rtl.v:286]
+WARNING: [Synth 8-3917] design top has port y[645] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[591] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[590] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[589] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[588] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[587] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[586] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[585] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[584] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[583] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[582] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[581] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[580] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[579] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[563] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[562] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[561] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[560] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[559] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[558] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[557] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[556] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[555] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[529] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[528] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[527] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[526] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[525] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[524] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[523] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[522] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[521] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[520] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[519] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[518] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[517] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[487] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[486] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[485] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[484] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[483] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[482] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[481] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[480] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[479] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[478] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[477] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[476] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[44] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[43] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[42] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[41] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[40] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[39] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[38] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[37] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[36] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[35] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[34] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[33] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[32] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[31] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[30] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[29] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[28] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[27] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[26] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[25] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[24] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[23] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[22] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[21] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[20] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[19] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[18] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[17] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[16] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[15] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[14] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[13] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[12] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[11] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[10] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[9] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[8] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[7] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[6] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[5] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[4] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[3] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[1] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[0] driven by constant 0
+WARNING: [Synth 8-7129] Port y[357] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[356] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[355] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[354] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[353] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[352] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[351] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[350] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[349] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[348] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[347] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[346] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[193] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[192] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[191] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[190] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[189] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[20] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[19] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[18] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[17] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[16] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[15] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[14] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[13] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[12] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[11] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire27[10] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire28[9] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire28[8] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire28[7] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire28[6] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire28[5] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire28[4] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire28[3] in module module24 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire28[2] in module module24 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1883.637 ; gain = 502.555 ; free physical = 76546 ; free virtual = 81204
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1898.480 ; gain = 517.398 ; free physical = 76558 ; free virtual = 81219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1906.484 ; gain = 525.402 ; free physical = 76569 ; free virtual = 81230
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'forvar19' [/home/user/vivado_project/rtl.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar245' [/home/user/vivado_project/rtl.v:103]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1914.492 ; gain = 533.410 ; free physical = 76557 ; free virtual = 81219
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 1     
++---XORs : 
+	   2 Input     37 Bit         XORs := 2     
+	   2 Input     22 Bit         XORs := 1     
+	   2 Input     12 Bit         XORs := 1     
+	   2 Input     11 Bit         XORs := 3     
+	   2 Input      6 Bit         XORs := 1     
++---XORs : 
+	               27 Bit    Wide XORs := 1     
+	               24 Bit    Wide XORs := 1     
+	               22 Bit    Wide XORs := 1     
+	               21 Bit    Wide XORs := 3     
+	               20 Bit    Wide XORs := 1     
+	               17 Bit    Wide XORs := 1     
+	               15 Bit    Wide XORs := 1     
+	               12 Bit    Wide XORs := 2     
+	               11 Bit    Wide XORs := 1     
+	                8 Bit    Wide XORs := 1     
+	                3 Bit    Wide XORs := 2     
+	                1 Bit    Wide XORs := 4     
++---Registers : 
+	               22 Bit    Registers := 2     
+	               21 Bit    Registers := 3     
+	               20 Bit    Registers := 3     
+	               19 Bit    Registers := 1     
+	               18 Bit    Registers := 3     
+	               17 Bit    Registers := 1     
+	               15 Bit    Registers := 2     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 5     
+	               11 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Multipliers : 
+	               5x22  Multipliers := 1     
+	               3x12  Multipliers := 1     
+	               8x13  Multipliers := 1     
+	               3x11  Multipliers := 1     
++---Muxes : 
+	   2 Input   37 Bit        Muxes := 2     
+	   2 Input   29 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 2     
+	   2 Input   22 Bit        Muxes := 4     
+	   2 Input   21 Bit        Muxes := 8     
+	   2 Input   20 Bit        Muxes := 5     
+	   2 Input   18 Bit        Muxes := 3     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 10    
+	   2 Input   11 Bit        Muxes := 5     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 5     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Device 21-9227] Part: xc7k70tfbv676-1 does not have CEAM library.
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met

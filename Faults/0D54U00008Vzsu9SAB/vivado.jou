@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jun 27 21:51:26 2024
+# Process ID: 28489
+# Current directory: /home/user/vivado_project
+# Command line: vivado -mode tcl
+# Log file: /home/user/vivado_project/vivado.log
+# Journal file: /home/user/vivado_project/vivado.jou
+# Running On        :user-System-Product-Name
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.3 LTS
+# Processor Detail  :13th Gen Intel(R) Core(TM) i9-13900K
+# CPU Frequency     :3700.000 MHz
+# CPU Physical cores:24
+# CPU Logical cores :32
+# Host memory       :134858 MB
+# Swap memory       :2147 MB
+# Total Virtual     :137005 MB
+# Available Virtual :134925 MB
+#-----------------------------------------------------------
+read_verilog rtl.v 
+synth_design -top top -flatten_hierarchy full -gated_clock_conversion off -bufg 8 -directive AreaOptimized_medium -fsm_extraction johnson -resource_sharing auto -cascade_dsp force -incremental_mode off
