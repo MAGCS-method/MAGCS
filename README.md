@@ -19,30 +19,41 @@
 
 ***
 ### Directory Structure of MAGCS-method
+
 1. MAGCS Folder:
+
 This folder contains the implementation of our proposed MAGCS method for detecting optimization faults in logic synthesis tools. Key components include:
 
 (1) MAGCS_YOSYS.py and MAGCS_Vivado.py: Implement the MAGCS algorithm tailored for detecting optimization faults in the YOSYS and Vivado synthesis tools, respectively.
+
 (2) Evaluate_Yosys.py and Evaluate_Vivado.py: Define our reward function, designed to guide both the selection of optimization operation sequences and the configuration parameters for each optimization step.
 
 2. feature Folder:
+
 (1) Contains the Verilog code features we constructed to support the diversity of test programs.
 
-3. get_feature Folder:
+4. get_feature Folder:
+   
 This folder provides code to extract and calculate features for Verilog code:
 
 (1) ALL_get_feature.py: Parses given Verilog files into AST format and calculates their features using the feature package.
+
 (2) Diversity_calculation.py: Calculates the differences between Verilog code files, serving as the core of our test case selection component, which builds the final test set.
 
 4. baseline Folder:
+   
 Contains the baseline algorithms used in our study for comparative purposes:
 
 (1) Default: Uses the default optimization sequence provided by the synthesis tool (e.g., YOSYS with opt_fast, opt_full).
+
 (2) InitSwarm: Randomly modifies certain configuration parameters within a fixed optimization sequence.
+
 (3) DynSwarm: First constructs a random sequence of optimization operations, then randomly modifies some configuration parameters.
+
 (4) DeLoSo: Uses a heuristic algorithm to explore optimization sequences and parameter configurations.
 
 5. Faults Folder:
+   
 (1) This folder contains the confirmed faults discovered in the Vivado and Yosys synthesis tools. Currently, a total of 32 faults have been identified and resolved. Each fault is documented with a failure_description.pdf, providing details on the fault conditions and a thorough explanation.
 ***
 
