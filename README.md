@@ -17,6 +17,67 @@
  Logic synthesis tools play a critical role in digital circuit design by converting high-level hardware description languages into gate-level netlists and optimizing them according to the design requirements.
  However, the complexity of optimization operations and the variety of parameter configurations can introduce potential faults during the synthesis process, leading incorrect logic synthesis. To this end, we propose MAGCS, a method for detecting optimization faults in logic synthesis. MAGCS leverages multi-agent reinforcement learning during real-time testing to dynamically optimize configuration sequences, enabling efficient detection of synthesis optimization faults. MAGCS consists of three main components. First, the test program selection module extracts multi-dimensional features and calculates cosine similarity to select the most representative test cases from a large dataset. Second, the optimization sequence selection module uses the A2C multi-agent reinforcement learning algorithm to dynamically adjust operation sequences and parameter configurations, gradually discovering the optimal sequence of optimization steps. Finally, the optimization fault validation module performs rigorous equivalence checking to ensure that the synthesized design is functionally identical to the original, effectively identifying any faults introduced during optimization. We conducted comprehensive evaluations of this framework using Vivado and Yosys, two major logic synthesis tools, identifying 32 faults across four categories. All issues have been confirmed and resolved by the respective vendors and communities. Furthermore, officials from the Vivado community highly praised the fault reports submitted by MAGCS, recognizing their significance in improving the tool.
 
+### RQ. Effectiveness of Timing Features
+
+To validate the effectiveness of the newly introduced **timing features** in enhancing the diversity of test programs and improving fault detection capabilities, we conducted an **ablation study**. The study compared the performance of **MAGCS** with and without timing features on both **Vivado** and **Yosys** synthesis tools over a testing period of two weeks. The same 1,000 diverse test programs were used in both configurations, and feature vectors were constructed following the method described in Section III.A.
+
+The experiments were conducted over a **two-week** testing period using MAGCS to evaluate the effectiveness of timing features in fault detection. Both Vivado and Yosys synthesis tools were tested under identical hardware environments and experimental conditions. Two feature configurations were compared: one without timing features and another with timing features included. In the former configuration, the feature vectors consisted of five traditional categories:
+- Data processing and operations
+- Data flow control
+- Structuring and modularization
+- Control flow and logic
+- Abstraction and reuse
+
+In the latter configuration, timing features such as:
+- Number of clock signals
+- Flip-flops
+- Edge-triggered logic
+- Non-blocking assignments  
+
+These features were added to capture the temporal characteristics of hardware circuits, which are particularly critical for describing the timing behavior of **FPGA** and **ASIC** designs.
+
+For both configurations, MAGCS employed the same **multi-agent reinforcement learning** framework to dynamically generate optimization sequences and applied them to the same set of 1,000 diverse test programs. The primary evaluation metric was the **number of detected faults** recorded under each configuration over the testing period.
+
+---
+
+### Results
+
+As shown in **Table 1**, the inclusion of timing features significantly improved the fault detection capabilities of MAGCS.
+
+| Tool   | Configuration           | Detected Faults |
+|--------|-------------------------|-----------------|
+| Vivado | Without timing features | 9               |
+| Vivado | With timing features    | 13              |
+| Yosys  | Without timing features | 2               |
+| Yosys  | With timing features    | 3               |
+
+---
+
+### Analysis
+
+The experimental results highlight the critical role of timing features in improving fault detection, which can be explained through the following aspects:
+
+#### 1. **Enhanced Diversity of Test Programs**
+   - The inclusion of timing features expands the feature space used to represent test programs, particularly by incorporating temporal behavior characteristics such as clock signal usage, edge-triggered logic, and non-blocking assignments.
+   - These characteristics are highly relevant in the context of logic synthesis optimizations, where many operations (e.g., edge-triggered optimization, flip-flop merging, and clock gating) are directly influenced by timing attributes.
+   - By including timing features, MAGCS was able to identify and select test programs with pronounced timing characteristics, which significantly increased the diversity of the test set. These diverse programs covered a broader range of potential optimization configurations and pathways, thereby exposing faults that were not detected in the absence of timing features.
+
+#### 2. **Sensitivity of Optimization Processes to Timing Features**
+   - Timing features are particularly impactful in triggering faults related to timing-sensitive optimizations. For example, optimizations such as flip-flop merging or clock domain adjustments depend heavily on the temporal characteristics of the design.
+   - In our experiments, the inclusion of timing features enabled MAGCS to detect several faults related to improper handling of clock signals or timing misconfigurations, which were missed when timing features were excluded.
+   - Additionally, the integration of timing features improved the granularity of MAGCS’s reward function in the multi-agent reinforcement learning framework, allowing it to more effectively prioritize optimization sequences that were likely to expose faults.
+
+#### 3. **Broader Coverage of Fault Types**
+   - The inclusion of timing features not only increased the total number of detected faults but also expanded the range of fault types identified.
+   - For instance, MAGCS with timing features detected performance faults and parsing errors caused by edge-triggered logic and clock signal mismanagement, which were not detected without timing features.
+   - This demonstrates that timing features are essential for exposing a broader spectrum of faults in logic synthesis tools.
+
+---
+
+### Summary
+
+The introduction of timing features provides MAGCS with a more comprehensive understanding of the temporal behavior of hardware circuits, significantly enhancing the diversity of test programs and the likelihood of fault detection. The experimental results demonstrate that timing features are indispensable in the context of **logic synthesis fault detection**, particularly for **timing-sensitive applications**.
+
 ***
 # Directory Structure of MAGCS-method
 
