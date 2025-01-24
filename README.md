@@ -23,14 +23,14 @@ To validate the effectiveness of the newly introduced **timing features** in enh
 
 The experiments were conducted over a two-week testing period using MAGCS to evaluate the effectiveness of timing features in fault detection. Both Vivado and Yosys synthesis tools were tested under identical hardware environments and experimental conditions. Two feature configurations were compared: one without timing features and another with timing features included. In the former configuration, the feature vectors consisted of five traditional categories: data processing and operations, data flow control, structuring and modularization, control flow and logic, and abstraction and reuse. In the latter configuration, timing features—such as the number of clock signals, flip-flops, edge-triggered logic, and non-blocking assignments—were added to capture the temporal characteristics of hardware circuits. These features are particularly critical in describing the timing behavior of FPGA and ASIC designs. For both configurations, MAGCS employed the same multi-agent reinforcement learning framework to dynamically generate optimization sequences and applied them to the same set of 1,000 diverse test programs. The primary evaluation metric was the number of detected faults recorded under each configuration over the testing period.
 
-As shown in **Table 1**, the inclusion of timing features significantly improved the fault detection capabilities of MAGCS. On Vivado, MAGCS with timing features detected 13 faults, compared to 9 faults without timing features. Similarly, on Yosys, 3 faults were detected with timing features, while only 2 faults were detected without them.
+As shown in **Table 1**, the inclusion of timing features significantly improved the fault detection capabilities of MAGCS. On Vivado, MAGCS with timing features detected 16 faults, compared to 10 faults without timing features. Similarly, on Yosys, 5 faults were detected with timing features, while only 3 faults were detected without them.
 
 | Tool   | Configuration           | Detected Faults |
 |--------|-------------------------|-----------------|
-| Vivado | Without timing features | 9               |
-| Vivado | With timing features    | 13              |
-| Yosys  | Without timing features | 2               |
-| Yosys  | With timing features    | 3               |
+| Vivado | Without timing features | 10               |
+| Vivado | With timing features    | 16              |
+| Yosys  | Without timing features | 3               |
+| Yosys  | With timing features    | 5               |
 
 The experimental results highlight the critical role of timing features in improving fault detection, which can be explained through the following aspects:
 
