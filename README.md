@@ -21,28 +21,9 @@
 
 To validate the effectiveness of the newly introduced **timing features** in enhancing the diversity of test programs and improving fault detection capabilities, we conducted an **ablation study**. The study compared the performance of **MAGCS** with and without timing features on both **Vivado** and **Yosys** synthesis tools over a testing period of two weeks. The same 1,000 diverse test programs were used in both configurations, and feature vectors were constructed following the method described in Section III.A.
 
-The experiments were conducted over a **two-week** testing period using MAGCS to evaluate the effectiveness of timing features in fault detection. Both Vivado and Yosys synthesis tools were tested under identical hardware environments and experimental conditions. Two feature configurations were compared: one without timing features and another with timing features included. In the former configuration, the feature vectors consisted of five traditional categories:
-- Data processing and operations
-- Data flow control
-- Structuring and modularization
-- Control flow and logic
-- Abstraction and reuse
+The experiments were conducted over a two-week testing period using MAGCS to evaluate the effectiveness of timing features in fault detection. Both Vivado and Yosys synthesis tools were tested under identical hardware environments and experimental conditions. Two feature configurations were compared: one without timing features and another with timing features included. In the former configuration, the feature vectors consisted of five traditional categories: data processing and operations, data flow control, structuring and modularization, control flow and logic, and abstraction and reuse. In the latter configuration, timing features—such as the number of clock signals, flip-flops, edge-triggered logic, and non-blocking assignments—were added to capture the temporal characteristics of hardware circuits. These features are particularly critical in describing the timing behavior of FPGA and ASIC designs. For both configurations, MAGCS employed the same multi-agent reinforcement learning framework to dynamically generate optimization sequences and applied them to the same set of 1,000 diverse test programs. The primary evaluation metric was the number of detected faults recorded under each configuration over the testing period.
 
-In the latter configuration, timing features such as:
-- Number of clock signals
-- Flip-flops
-- Edge-triggered logic
-- Non-blocking assignments  
-
-These features were added to capture the temporal characteristics of hardware circuits, which are particularly critical for describing the timing behavior of **FPGA** and **ASIC** designs.
-
-For both configurations, MAGCS employed the same **multi-agent reinforcement learning** framework to dynamically generate optimization sequences and applied them to the same set of 1,000 diverse test programs. The primary evaluation metric was the **number of detected faults** recorded under each configuration over the testing period.
-
----
-
-### Results
-
-As shown in **Table 1**, the inclusion of timing features significantly improved the fault detection capabilities of MAGCS.
+As shown in **Table 1**, the inclusion of timing features significantly improved the fault detection capabilities of MAGCS. On Vivado, MAGCS with timing features detected 13 faults, compared to 9 faults without timing features. Similarly, on Yosys, 3 faults were detected with timing features, while only 2 faults were detected without them.
 
 | Tool   | Configuration           | Detected Faults |
 |--------|-------------------------|-----------------|
@@ -50,10 +31,6 @@ As shown in **Table 1**, the inclusion of timing features significantly improved
 | Vivado | With timing features    | 13              |
 | Yosys  | Without timing features | 2               |
 | Yosys  | With timing features    | 3               |
-
----
-
-### Analysis
 
 The experimental results highlight the critical role of timing features in improving fault detection, which can be explained through the following aspects:
 
@@ -71,8 +48,6 @@ The experimental results highlight the critical role of timing features in impro
    - The inclusion of timing features not only increased the total number of detected faults but also expanded the range of fault types identified.
    - For instance, MAGCS with timing features detected performance faults and parsing errors caused by edge-triggered logic and clock signal mismanagement, which were not detected without timing features.
    - This demonstrates that timing features are essential for exposing a broader spectrum of faults in logic synthesis tools.
-
----
 
 ### Summary
 
